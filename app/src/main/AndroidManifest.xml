@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BTHomePage">
-        <activity android:name=".Exercises"></activity>
+        <activity android:name=".FaqActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ProgressActivity" />
+        <activity android:name=".DietActivity" />
+        <activity android:name=".LungsActivity" />
+        <activity android:name=".DiagnosisActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

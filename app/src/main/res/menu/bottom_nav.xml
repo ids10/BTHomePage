@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/diagnosisActivity"
+        android:enabled="true"
+        android:title="Diagnosis"
+        android:icon="@drawable/diagnosislogo"/>
+    <item
+        android:id="@+id/exerciseActivity"
+        android:enabled="true"
+        android:title="Exercises"
+        android:icon="@drawable/lungs"/>
+    <item
+        android:id="@+id/lifestyleActivity"
+        android:enabled="true"
+        android:title="Lifestyle"
+        android:icon="@drawable/dietexercise"/>
+    <item
+        android:id="@+id/progressActivity"
+        android:enabled="true"
+        android:title="Progress"
+        android:icon="@drawable/progress"/>
+    <item
+        android:id="@+id/settingsActivity"
+        android:enabled="true"
+        android:title="Settings"
+        android:icon="@drawable/settings"/>
+
+</menu>
