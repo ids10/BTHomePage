@@ -35,27 +35,27 @@
 
     <ImageView
         android:id="@+id/imgDiet"
-        android:layout_width="97dp"
-        android:layout_height="104dp"
+        android:layout_width="87dp"
+        android:layout_height="111dp"
+        android:layout_below="@+id/tvDiagnosis"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="54dp"
-        android:layout_marginLeft="54dp"
-        android:layout_marginTop="245dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="49dp"
         android:src="@drawable/dietexercise" />
 
     <ImageView
         android:id="@+id/imgProgress"
-        android:layout_width="87dp"
-        android:layout_height="102dp"
-        android:layout_alignParentTop="true"
+        android:layout_width="127dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/tvLungs"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="249dp"
-        android:layout_marginEnd="82dp"
-        android:layout_marginRight="82dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:src="@drawable/progress" />
 
     <ImageView
@@ -66,9 +66,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="49dp"
-        android:layout_marginLeft="49dp"
-        android:layout_marginBottom="94dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="105dp"
         android:src="@drawable/faq" />
 
     <ImageView
@@ -78,9 +78,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="97dp"
-        android:layout_marginRight="97dp"
-        android:layout_marginBottom="91dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginRight="69dp"
+        android:layout_marginBottom="109dp"
         android:src="@drawable/settings" />
 
     <TextView
@@ -112,43 +112,15 @@
         android:text="Breathing Exercises" />
 
     <TextView
-        android:id="@+id/tvDiet"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_below="@+id/imgDiet"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="54dp"
-        android:layout_marginLeft="54dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="316dp"
-        android:text="Diet/Lifestyle" />
-
-    <TextView
-        android:id="@+id/tvProgress"
-        android:layout_width="78dp"
-        android:layout_height="24dp"
-        android:layout_below="@+id/imgProgress"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginRight="88dp"
-        android:layout_marginBottom="322dp"
-        android:text="Progress" />
-
-    <TextView
         android:id="@+id/tvFaq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="74dp"
-        android:layout_marginLeft="74dp"
-        android:layout_marginBottom="51dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginBottom="47dp"
         android:text="FAQ" />
 
     <TextView
@@ -158,8 +130,37 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="110dp"
-        android:layout_marginRight="110dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginRight="82dp"
+        android:layout_marginBottom="51dp"
         android:text="Settings" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgDiet"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginBottom="300dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgProgress"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginRight="83dp"
+        android:layout_marginBottom="309dp"
+        android:text="TextView" />
+
 </android.widget.RelativeLayout>
