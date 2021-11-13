@@ -25,8 +25,33 @@ public class HomePage extends AppCompatActivity {
 
 
 
+
+
+
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
+
+        BottomNavigationView bottomNavigationView = (BottomNavigationView)
+                findViewById(R.id.bottomNav_view);
+
+//        bottomNavigationView.setOnNavigationItemSelectedListener(
+//                new BottomNavigationView.OnNavigationItemSelectedListener() {
+//                    @Override
+//                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                        switch (item.getItemId()) {
+//                            case R.id.diagnosisActivity:
+//
+//                            case R.id.lungsActivity:
+//
+//                            case R.id.settingsActivity:
+//
+//                            case R.id.progressActivity:
+//                            case R.id.dietActivity:
+//
+//                        }
+//                        return true;
+//                    }
+//                });
 //        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
 //        DiagnosisActivity diagnosisactivity = new DiagnosisActivity();

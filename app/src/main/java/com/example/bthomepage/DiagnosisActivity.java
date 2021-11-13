@@ -10,7 +10,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class DiagnosisActivity extends AppCompatActivity{
 
-    BottomNavigationView bottomNavigationView;
 
         @Override
     protected void onCreate(Bundle savedInstanceState) {
