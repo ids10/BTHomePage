@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BTHomePage">
-        <activity android:name=".AsthmaDescript"></activity>
+        <activity android:name=".drainpos"></activity>
+        <activity android:name=".PV" />
+        <activity android:name=".Diaphram" />
+        <activity android:name=".AutoDrainage" />
+        <activity android:name=".ACBT" />
+        <activity android:name=".PLBreathing" />
+        <activity android:name=".AsthmaDescript" />
         <activity android:name=".CBDescript" />
         <activity android:name=".CFDescript" />
         <activity android:name=".COPDDescript" />
