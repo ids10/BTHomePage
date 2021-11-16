@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AsthmaDescript">
+
+    <TextView
+        android:id="@+id/asthmatv"
+        android:layout_width="242dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="68dp"
+        android:text="Asthma"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/asthmainfo"
+        android:layout_width="334dp"
+        android:layout_height="331dp"
+        android:layout_marginTop="40dp"
+        android:text="Asthma is a chronic condition where lung airways are inflamed and become narrowed at times. Its cause varies depending on the person, but is often the result of the immune system’s response to a substance in the lungs. Depending on the substance, there can be swelling and narrowing of the airways - making it harder to breathe. Symptoms include wheezing, coughing, and chest tightness, therefore it is necessary to consult a doctor to identify treatment options such as control medications, short-term medications, and breathing exercises."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asthmatv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CFDescript">
+
+    <TextView
+        android:id="@+id/cftv"
+        android:layout_width="242dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="64dp"
+        android:text="Cystic Fibrosis"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cfinfo"
+        android:layout_width="334dp"
+        android:layout_height="331dp"
+        android:layout_marginTop="40dp"
+        android:text="Cystic fibrosis is a genetic condition that impacts cells, tissues, and glands. CF results in thick and sticky mucus build up that negatively affects other organs through infections, blockages, and inflammation. CF has a range of displaying few symptoms to life threatening complications. Symptoms can include fever, sinus infections, jaundice, and delayed growth. If these or irregular symptoms are identified, it is important to consult a doctor for the next steps that should be taken. There is not yet a cure of CF, but symptoms can be managed by clearing airways, utilizing medications, and surgery."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cftv" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

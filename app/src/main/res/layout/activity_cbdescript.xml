@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CBDescript">
+
+    <TextView
+        android:id="@+id/cbtv"
+        android:layout_width="242dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="68dp"
+        android:text="Chronic Bronchitis"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cbinfo"
+        android:layout_width="334dp"
+        android:layout_height="331dp"
+        android:layout_marginTop="40dp"
+        android:text="Chronic bronchitis is a condition where the bronchial tubes are inflamed and results in an ongoing cough for several months and comes repeatecly over the years. It is caused by long term exposure to irritants such as tobacco smoke. Mucus is constantly building up, as a result of the inflamed airways and also contributed to COPD. Symptoms include constant coughing, wheezing and chest pain. It is important to consult a doctor for healthy lifestyle recommendations, medication, and different therapy forms."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbtv" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

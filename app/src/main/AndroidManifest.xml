@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BTHomePage">
-        <activity android:name=".Registration"></activity>
+        <activity android:name=".AsthmaDescript"></activity>
+        <activity android:name=".CBDescript" />
+        <activity android:name=".CFDescript" />
+        <activity android:name=".COPDDescript" />
+        <activity android:name=".Registration" />
         <activity android:name=".FaqActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".ProgressActivity" />

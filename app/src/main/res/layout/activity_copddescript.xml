@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".COPDDescript">
+
+    <TextView
+        android:id="@+id/copdtv"
+        android:layout_width="242dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="68dp"
+        android:text="COPD/Emphysema"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/copdinfo"
+        android:layout_width="334dp"
+        android:layout_height="331dp"
+        android:layout_marginTop="40dp"
+        android:text="COPD (chronic obstructive pulmonary disease) causes obstructed airflow from the lungs. Emphysema - damage to air sacs so air is not efficiently transferred to the blood-  and chronic bronchitis - damage to bronchial tubes- are contributors to COPD. Symptoms include difficulty breathing, cough, mucus, and wheezing. COPD is typically caused by repeated exposure to irritating gases. It is important to remember that this is treatable. If you notice signs of wheezing, chest tightness, a lack of energy, or unintended weight loss, it may be recommended to see a doctor. Lung function tests, chest x-rays, and other tests deemed necessary by the doctor may be performed. If determined to have COPD/emphysema, there are treatment options to relieve symptoms, slow its progression, and prevent/treat complications"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copdtv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
