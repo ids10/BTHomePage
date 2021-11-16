@@ -1,20 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/lifestyleActivity"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DietActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <Button
-        android:id="@+id/button2"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".DietActivity">
+
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.495"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/staticLifestyle" />-->
+
+        <TextView
+            android:id="@+id/staticLifestyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Lifestyle"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/lifestyleInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.615" />
+
+        <TextView
+            android:id="@+id/drinkwater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:text="Drink Water"
+            android:textStyle="bold" />
+
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.533"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <TextView
+            android:id="@+id/drinkwaterinfo"
+            android:layout_width="196dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="12dp"
+            android:text="It is crtitical for overall health as well as breathing functions that every individual drinks at least 8 cups of water a day! Reasons to support this include redness, dullness, dehydration of the skin and/or acne." />
+
+        <TextView
+        android:id="@+id/avoidirritants"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="diet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="262dp" />
+        android:layout_marginTop="12dp"
+        android:text="Avoid Irritants"
+        android:textStyle="bold"
+            android:gravity="center_vertical"/>
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+        <TextView
+            android:id="@+id/avoidirritantsinfo"
+            android:layout_width="204dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:text="Be mindful of the weather outside. Hot weather can cause symptoms to flare up, especially when the patient becomes dehydrated." />
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.551"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <TextView
+        android:id="@+id/avoiddairy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Avoid Dairy"
+            android:gravity="center_vertical"
+        android:textStyle="bold"/>
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.492"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:id="@+id/avoiddairyinfo"
+        android:layout_width="202dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:text="Contrary to popular belief, dairy is not critical for bone health and can cause further issues to sensitivities. A dairy allergy can worsen breathing, stomach, and skin reactions"/>
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.497"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.456"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+        <TextView
+            android:id="@+id/getsleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:text="Sleep is Important"
+            android:textStyle="bold" />
+
+        <TextView
+        android:id="@+id/getsleepinfo"
+        android:layout_width="222dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="12dp"
+        android:text="Sleep is essential in recovery. In order to heal, patietns must be getting the recommended 9 hours of sleep a day."/>
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.497"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <include
         layout="@layout/item_bottom_navigation"
@@ -23,4 +133,6 @@
         android:layout_gravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+    </LinearLayout>
+</ScrollView>
