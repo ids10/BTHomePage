@@ -120,7 +120,7 @@
         android:layout_width="222dp"
         android:layout_height="95dp"
         android:layout_marginTop="12dp"
-        android:text="Sleep is essential in recovery. In order to heal, patietns must be getting the recommended 9 hours of sleep a day."/>
+        android:text="Sleep is essential in recovery. In order to heal, patients must be getting the recommended 9 hours of sleep a day."/>
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
 <!--        app:layout_constraintHorizontal_bias="0.497"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
