@@ -26,16 +26,18 @@ public class Registration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        setupUIViews();
+//        setupUIViews();
 
 
-        regButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(validate()){
+
+//        regButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(this, HomePage.class);
+//                if(validate()){
                     //https://www.youtube.com/watch?v=zKBGjGoeid0
-                    String user_email = userEmail.getText().toString().trim();
-                    String user_password = userPassword.getText().toString().trim();
+//                    String user_email = userEmail.getText().toString().trim();
+//                    String user_password = userPassword.getText().toString().trim();
 
 //                    firebaseAuth.createUserWithEmailAndPassword(user_email, user_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 //                        @Override
@@ -53,41 +55,71 @@ public class Registration extends AppCompatActivity {
 //
 //                        }
 //                    });
-                };
+//                };
             }
-        });
 
-        userLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Registration.this, HomePage.class));
-            }
-        });
-    }
 
-    private void setupUIViews(){
+//        });
+//
+//        userLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(Registration.this, HomePage.class));
+//            }
+//        });
+//    }
+
+//    private void setupUIViews(){
+//        userName = (EditText)findViewById(R.id.etUserName);
+//        userPassword = (EditText)findViewById(R.id.etUserPassword);
+//        userEmail = (EditText)findViewById(R.id.etUserEmail);
+//        regButton = (Button)findViewById(R.id.btnRegister);
+//        userLogin = (TextView)findViewById(R.id.tvUserLogin);
+//
+//    }
+    public void sendMessageReg(View view) {
+        Intent intent = new Intent(this, HomePage.class);
         userName = (EditText)findViewById(R.id.etUserName);
         userPassword = (EditText)findViewById(R.id.etUserPassword);
         userEmail = (EditText)findViewById(R.id.etUserEmail);
         regButton = (Button)findViewById(R.id.btnRegister);
+
+        String userNameString = userName.getText().toString();
+        String userPasswordString = userPassword.getText().toString();
+        String userEmailString = userEmail.getText().toString();
+
+        if (userNameString.isEmpty() || userPasswordString.isEmpty() || userEmailString.isEmpty()){
+            Toast.makeText(this, "Please enter all details", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
+//            intent.putExtra(EXTRA_MESSAGE, username);
+            startActivity(intent);
+        }
+    }
+
+    public void sendMessageOldLogin(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         userLogin = (TextView)findViewById(R.id.tvUserLogin);
+        startActivity(intent);
+
 
     }
 
-    private Boolean validate(){
-        Boolean result = false;
-
-        String name = userName.getText().toString();
-        String password = userPassword.getText().toString();
-        String email = userEmail.getText().toString();
-
-        if(name.isEmpty() || password.isEmpty() || email.isEmpty()){
-            Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            result = true;
-        }
-
-        return result;
-    }
+//    private Boolean validate(){
+//        Boolean result = false;
+//
+//        String name = userName.getText().toString();
+//        String password = userPassword.getText().toString();
+//        String email = userEmail.getText().toString();
+//
+//        if(name.isEmpty() || password.isEmpty() || email.isEmpty()){
+//            Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT).show();
+//        }
+//        else{
+//            result = true;
+//        }
+//
+//        return result;
+//    }
 }
