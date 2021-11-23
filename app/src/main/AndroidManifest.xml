@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BTHomePage">
-        <activity android:name=".drainpos"></activity>
+        <activity android:name=".AutoDrainageStepThree"></activity>
+        <activity android:name=".AutoDrainageStepTwo" />
+        <activity android:name=".AutoDrainageStepOne" />
+        <activity android:name=".ACBTStepThree" />
+        <activity android:name=".ACBTStepTwo" />
+        <activity android:name=".ACBTStepOne" />
+        <activity android:name=".drainpos" />
         <activity android:name=".PV" />
         <activity android:name=".Diaphram" />
         <activity android:name=".AutoDrainage" />

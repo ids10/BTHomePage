@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class PLBreathing extends AppCompatActivity {
+public class ACBTStepThree extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_plbreathing);
+        setContentView(R.layout.activity_acbtstep_three);
     }
     public void sendMessagesProgress(View view) {
         Intent intent = new Intent(this, ProgressActivity.class);
@@ -21,6 +21,4 @@ public class PLBreathing extends AppCompatActivity {
         Intent intent = new Intent(this, LungsActivity.class);
         startActivity(intent);
     }
-
-
 }

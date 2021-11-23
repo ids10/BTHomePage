@@ -45,6 +45,8 @@
         android:layout_height="130dp"
         android:onClick="sendMessageCOPD"
         android:text="COPD/Emphsyema"
+        android:textColor="#020202"
+        app:backgroundTint="#C5DEEA"
         app:layout_constraintBaseline_toBaselineOf="@+id/cysticfibrosisbtn"
         app:layout_constraintEnd_toStartOf="@+id/cysticfibrosisbtn"
         app:layout_constraintStart_toStartOf="parent" />
@@ -58,6 +60,8 @@
         android:layout_marginRight="56dp"
         android:onClick="sendMessageCF"
         android:text="Cystic Fibrosis"
+        android:textColor="#000000"
+        app:backgroundTint="#C5DEEA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/diagnosesTitle" />
 
@@ -67,6 +71,8 @@
         android:layout_height="130dp"
         android:onClick="sendMessageCB"
         android:text="Chronic Bronchitis"
+        android:textColor="#000000"
+        app:backgroundTint="#C5DEEA"
         app:layout_constraintBaseline_toBaselineOf="@+id/asthmabtn"
         app:layout_constraintEnd_toStartOf="@+id/asthmabtn"
         app:layout_constraintHorizontal_bias="0.441"
@@ -80,6 +86,8 @@
         android:layout_marginRight="36dp"
         android:onClick="sendMessageAsthma"
         android:text="Asthma"
+        android:textColor="#000000"
+        app:backgroundTint="#C5DEEA"
         app:layout_constraintBottom_toTopOf="@+id/include"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cysticfibrosisbtn"
@@ -91,6 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:text="Diagnoses"
+        android:textColor="#000000"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"

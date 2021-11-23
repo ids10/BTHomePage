@@ -2,7 +2,9 @@ package com.example.bthomepage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class ProgressActivity extends AppCompatActivity {
 
@@ -11,4 +13,7 @@ public class ProgressActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress);
     }
+
+
+
 }

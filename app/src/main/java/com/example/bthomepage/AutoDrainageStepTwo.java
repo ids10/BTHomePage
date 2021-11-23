@@ -6,15 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class AutoDrainage extends AppCompatActivity {
+public class AutoDrainageStepTwo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_auto_drainage);
+        setContentView(R.layout.activity_auto_drainage_step_two);
     }
-    public void sendMessageAutoSteps(View view) {
-        Intent intent = new Intent(this, AutoDrainageStepOne.class);
+    public void sendMessagesAutoStepThree(View view) {
+        Intent intent = new Intent(this, AutoDrainageStepThree.class);
         startActivity(intent);
     }
 
