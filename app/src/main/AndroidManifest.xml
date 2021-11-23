@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BTHomePage">
-        <activity android:name=".AutoDrainageStepThree"></activity>
+        <activity android:name=".Vibration"></activity>
+        <activity android:name=".HighFreq" />
+        <activity android:name=".BackPerc" />
+        <activity android:name=".ChestPerc" />
+        <activity android:name=".OptionsPV" />
+        <activity android:name=".AutoDrainageStepThree" />
         <activity android:name=".AutoDrainageStepTwo" />
         <activity android:name=".AutoDrainageStepOne" />
         <activity android:name=".ACBTStepThree" />

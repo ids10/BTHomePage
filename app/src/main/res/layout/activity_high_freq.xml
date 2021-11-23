@@ -12,62 +12,59 @@
         android:background="#FFFFFF"
         android:gravity="center"
         android:orientation="vertical"
-        tools:context=".AutoDrainageStepOne">
+        tools:context=".HighFreq">
 
         <TextView
-            android:id="@+id/textView16"
-            android:layout_width="226dp"
-            android:layout_height="173dp"
-            android:layout_marginTop="64dp"
+            android:id="@+id/textView"
+            android:layout_width="203dp"
+            android:layout_height="174dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Step 3: Expel Mucus"
+            android:text="High Frequency Oscillation Vest"
             android:textColor="#000000"
             android:textSize="35sp" />
 
-
         <TextView
-            android:id="@+id/textView17"
-            android:layout_width="254dp"
-            android:layout_height="89dp"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="In this phase, you should feel the phlegm moving in your chest, giving you the urge to cough."
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/textView3"
             android:layout_width="260dp"
-            android:layout_height="77dp"
+            android:layout_height="54dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:textColor="#000000"
-            android:text="1.Take a large, deep breath in and hold it for three seconds."/>
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="268dp"
-            android:layout_height="57dp"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="2. Breathe out normally."
+            android:text="You usually use a high-frequency chest wall oscillator for about five minutes at a time with breaks to allow you to cough and clear out the loosened mucus between sessions."
             android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="265dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Chest wall oscillator devices are surprisingly non-bulky and streamlined, and there are several different versions on the market, including the Vest Airway Clearance System and the SmartVest."
+            android:textColor="#020202" />
+
 
         <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="match_parent"
-            android:layout_height="279dp"
+            android:id="@+id/imageView10"
+            android:layout_width="286dp"
+            android:layout_height="141dp"
             android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:src="@drawable/generalautoimg" />
+
+            app:srcCompat="@drawable/oscillatorimg" />
 
         <TextView
-            android:id="@+id/textView20"
-            android:layout_width="268dp"
-            android:layout_height="95dp"
+            android:id="@+id/textViewLinkAutogenic"
+            android:layout_width="286dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="*Continue taking long, deep inhales, holding your breath for a few moments, and then exhaling normally until you feel mucus in your upper chest and throat. Use huffing exhales to force up the phlegm and cough it out."
-            android:textColor="#000000"
-            android:textSize="10sp" />
+            android:text="@string/messageWithOscillatorDescript"
+            android:textColorLink="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.436"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView23"
