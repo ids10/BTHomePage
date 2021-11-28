@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
+import android.widget.TextView;
 
 public class BackLungs extends AppCompatActivity {
 
@@ -12,6 +14,11 @@ public class BackLungs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_back_lungs);
+
+        TextView textView;
+
+        textView = findViewById(R.id.textViewLinkAutogenic);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
     public void sendMessagesProgress(View view) {
         Intent intent = new Intent(this, ProgressActivity.class);

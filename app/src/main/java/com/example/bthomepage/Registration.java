@@ -11,6 +11,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 //import com.google.android.gms.tasks.OnCompleteListener;
 //import com.google.android.gms.tasks.Task;
 //import com.google.firebase.auth.AuthResult;
@@ -21,11 +27,20 @@ public class Registration extends AppCompatActivity {
     private EditText userName, userPassword, userEmail;
     private Button regButton;
     private TextView userLogin;
+    private FirebaseAuth auth;
+//    private FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+//        mAuth = FirebaseAuth.getInstance();
+//
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        if(currentUser != null) {
+//            Intent intent = new Intent(this, MainActivity.class);
+//        }
 //        setupUIViews();
 
 
@@ -78,24 +93,49 @@ public class Registration extends AppCompatActivity {
 //
 //    }
     public void sendMessageReg(View view) {
-        Intent intent = new Intent(this, HomePage.class);
-        userName = (EditText)findViewById(R.id.etUserName);
+//        Intent intent = new Intent(this, HomePage.class);
+//        userName = (EditText)findViewById(R.id.etUserName);
         userPassword = (EditText)findViewById(R.id.etUserPassword);
         userEmail = (EditText)findViewById(R.id.etUserEmail);
         regButton = (Button)findViewById(R.id.btnRegister);
+        auth = FirebaseAuth.getInstance();
 
-        String userNameString = userName.getText().toString();
+
+//        userNameString.isEmpty()
+
+//        String userNameString = userName.getText().toString();
         String userPasswordString = userPassword.getText().toString();
         String userEmailString = userEmail.getText().toString();
 
-        if (userNameString.isEmpty() || userPasswordString.isEmpty() || userEmailString.isEmpty()){
+        if (userPasswordString.isEmpty() || userEmailString.isEmpty()){
             Toast.makeText(this, "Please enter all details", Toast.LENGTH_SHORT).show();
         }
         else {
-            Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
-//            intent.putExtra(EXTRA_MESSAGE, username);
-            startActivity(intent);
+//            Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
+////            intent.putExtra(EXTRA_MESSAGE, username);
+            registerUser(userEmailString, userPasswordString);
+//            startActivity(intent);
         }
+    }
+
+    private void registerUser(String userEmail, String userPassword) {
+        auth.createUserWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(Registration.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    Toast.makeText(Registration.this, "Registration successful!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Registration.this, HomePage.class);
+                    startActivity(intent);
+
+                }
+                else{
+                    Toast.makeText(Registration.this, "Please enter all details", Toast.LENGTH_SHORT).show();
+
+
+                }
+
+            }
+        });
     }
 
     public void sendMessageOldLogin(View view) {

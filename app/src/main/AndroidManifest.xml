@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BTHomePage">
-        <activity android:name=".BackLungs"></activity>
+        <activity android:name=".Calendar" />
+        <activity android:name=".BackLungs" />
         <activity android:name=".SideLungs" />
         <activity android:name=".FrontLungs" />
         <activity android:name=".OptionsDrainPos" />

@@ -12,9 +12,11 @@ public class ACBT extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        TextView textView;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acbt);
+
+        TextView textView;
 
         textView = findViewById(R.id.textViewLink);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
