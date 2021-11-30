@@ -1,17 +1,63 @@
 package com.example.bthomepage;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
-public class LungsActivity extends AppCompatActivity {
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+public class LungsActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lungs);
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item){
+                switch (item.getItemId()) {
+                    case R.id.diagnosisActivity:
+                        Intent intent1 = new Intent(LungsActivity.this, DiagnosisActivity.class);
+                        startActivity(intent1);
+                        break;
+
+
+                    case R.id.exerciseActivity:
+                        Intent intent2 = new Intent(LungsActivity.this, LungsActivity.class);
+                        startActivity(intent2);
+                        break;
+
+                    case R.id.lifestyleActivity:
+                        Intent intent3 = new Intent(LungsActivity.this, DietActivity.class);
+                        startActivity(intent3);
+                        break;
+
+                    case R.id.progressActivity:
+                        Intent intent4 = new Intent(LungsActivity.this, ProgressActivity.class);
+                        startActivity(intent4);
+                        break;
+
+                    case R.id.settingsActivity:
+                        Intent intent5 = new Intent(LungsActivity.this, SettingsActivity.class);
+                        startActivity(intent5);
+                        break;
+
+
+
+                }
+                return false;
+            }
+        });
+//        bottomNavigationView.setSelectedItemId(R.id.person);
         
 
     }
@@ -40,4 +86,8 @@ public class LungsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull @org.jetbrains.annotations.NotNull MenuItem item) {
+        return false;
+    }
 }

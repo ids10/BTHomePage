@@ -7,13 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".DiagnosisActivity">
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/item_bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:layout_constraintBottom_toBottomOf="parent" />
+<!--    <include-->
+<!--        android:id="@+id/include"-->
+<!--        layout="@layout/item_bottom_navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent" />-->
 
     <!--    <fragment-->
     <!--        android:id="@+id/nav_fragment"-->
@@ -55,7 +55,7 @@
         android:id="@+id/cysticfibrosisbtn"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="92dp"
         android:layout_marginEnd="56dp"
         android:layout_marginRight="56dp"
         android:onClick="sendMessageCF"
@@ -88,7 +88,7 @@
         android:text="Asthma"
         android:textColor="#000000"
         app:backgroundTint="#C5DEEA"
-        app:layout_constraintBottom_toTopOf="@+id/include"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cysticfibrosisbtn"
         app:layout_constraintVertical_bias="0.645" />
@@ -105,4 +105,15 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

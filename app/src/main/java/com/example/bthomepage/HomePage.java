@@ -9,9 +9,12 @@ import android.view.MenuItem;
 import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.database.FirebaseDatabase;
 
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.util.HashMap;
 
 public class HomePage extends AppCompatActivity {
 
@@ -19,6 +22,13 @@ public class HomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+//        HashMap<String, Object> map = new HashMap<>();
+//        map.put("Name", "Isha");
+//        map.put("Email", "ids10@duke.edu");
+//
+//        FirebaseDatabase.getInstance().getReference().child("ProgrammingKnowledge").child("MultipleValues").updateChildren(map);
+
 
         Toast.makeText(HomePage.this, "Login successful!", Toast.LENGTH_SHORT).show();
 

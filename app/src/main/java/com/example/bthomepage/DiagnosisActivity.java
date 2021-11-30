@@ -12,6 +12,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class DiagnosisActivity extends AppCompatActivity {
 
+    BottomNavigationView bottomNavigationView;
+
+
 
 
     @Override
@@ -19,8 +22,49 @@ public class DiagnosisActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diagnosis);
 
-//            bottomNavigationView = findViewById(R.id.bottomNav_view);
-//            bottomNavigationView.setOnItemSelectedListener(this);
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item){
+                switch (item.getItemId()) {
+                    case R.id.diagnosisActivity:
+                        Intent intent1 = new Intent(DiagnosisActivity.this, DiagnosisActivity.class);
+                        startActivity(intent1);
+                        break;
+
+
+                    case R.id.exerciseActivity:
+                        Intent intent2 = new Intent(DiagnosisActivity.this, LungsActivity.class);
+                        startActivity(intent2);
+                        break;
+
+                    case R.id.lifestyleActivity:
+                        Intent intent3 = new Intent(DiagnosisActivity.this, DietActivity.class);
+                        startActivity(intent3);
+                        break;
+
+                    case R.id.progressActivity:
+                        Intent intent4 = new Intent(DiagnosisActivity.this, ProgressActivity.class);
+                        startActivity(intent4);
+                        break;
+
+                    case R.id.settingsActivity:
+                        Intent intent5 = new Intent(DiagnosisActivity.this, SettingsActivity.class);
+                        startActivity(intent5);
+                        break;
+
+
+
+                }
+                return false;
+            }
+        });
+//        bottomNavigationView.setSelectedItemId(R.id.person);
+
+
+
+
 
     }
     public void sendMessageCOPD(View view) {
@@ -67,6 +111,10 @@ public class DiagnosisActivity extends AppCompatActivity {
 //        }
 //        return false;
 //    }
+
+    public boolean onNavigationItemSelected(@NonNull @org.jetbrains.annotations.NotNull MenuItem item) {
+        return true;
+    }
 
 
     }
