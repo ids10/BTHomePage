@@ -109,6 +109,9 @@ public class Registration extends AppCompatActivity {
 
         if (userPasswordString.isEmpty() || userEmailString.isEmpty()){
             Toast.makeText(this, "Please enter all details", Toast.LENGTH_SHORT).show();
+        }else if (userPasswordString.length() < 6){
+            Toast.makeText(this, "Password too short", Toast.LENGTH_SHORT).show();
+
         }
         else {
 
@@ -126,6 +129,7 @@ public class Registration extends AppCompatActivity {
                     Toast.makeText(Registration.this, "Registration successful!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Registration.this, HomePage.class);
                     startActivity(intent);
+                    finish();
 
                 }
                 else{
