@@ -111,32 +111,34 @@ public class Registration extends AppCompatActivity {
             Toast.makeText(this, "Please enter all details", Toast.LENGTH_SHORT).show();
         }
         else {
-//            Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(Registration.this, HomePage.class);
+
 ////            intent.putExtra(EXTRA_MESSAGE, username);
-            registerUser(userEmailString, userPasswordString);
-//            startActivity(intent);
+//            registerUser(userEmailString, userPasswordString);
+            startActivity(intent);
         }
     }
 
-    private void registerUser(String userEmail, String userPassword) {
-        auth.createUserWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(Registration.this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                    Toast.makeText(Registration.this, "Registration successful!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Registration.this, HomePage.class);
-                    startActivity(intent);
-
-                }
-                else{
-                    Toast.makeText(Registration.this, "Please enter all details", Toast.LENGTH_SHORT).show();
-
-
-                }
-
-            }
-        });
-    }
+//    private void registerUser(String userEmail, String userPassword) {
+//        auth.createUserWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(Registration.this, new OnCompleteListener<AuthResult>() {
+//            @Override
+//            public void onComplete(@NonNull Task<AuthResult> task) {
+//                if (task.isSuccessful()){
+//                    Toast.makeText(Registration.this, "Registration successful!", Toast.LENGTH_SHORT).show();
+//                    Intent intent = new Intent(Registration.this, HomePage.class);
+//                    startActivity(intent);
+//
+//                }
+//                else{
+//                    Toast.makeText(Registration.this, "Please enter all details", Toast.LENGTH_SHORT).show();
+//
+//
+//                }
+//
+//            }
+//        });
+//    }
 
     public void sendMessageOldLogin(View view) {
         Intent intent = new Intent(this, MainActivity.class);

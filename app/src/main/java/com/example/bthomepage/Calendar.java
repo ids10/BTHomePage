@@ -2,7 +2,7 @@ package com.example.bthomepage;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.annotation.NonNull;
+//import android.support.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,8 +27,7 @@ public class Calendar extends AppCompatActivity {
         // which id is assign in xml file
         // use findViewById() to get the
         // CalendarView and TextView
-        calendar = (CalendarView)
-                findViewById(R.id.calendar);
+        calendar = findViewById(R.id.calendar);
 //        date_view = (TextView)
 //                findViewById(R.id.date_view);
 
