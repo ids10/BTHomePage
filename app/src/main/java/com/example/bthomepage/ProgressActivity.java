@@ -5,11 +5,35 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.Future;
+
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import static android.content.ContentValues.TAG;
+
 
 public class ProgressActivity extends AppCompatActivity {
     int minteger = 0;
@@ -64,6 +88,24 @@ public class ProgressActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+//        FirebaseFirestore db = FirebaseFirestore.getInstance();
+//
+//        Map<String, Object> city = new HashMap<>();
+//        city.put("name", "nyc");
+//        city.put("state", "ny");
+//        city.put("country", "usa");
+//
+//        db.collection("users").document("JSR").set(city).addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull @NotNull Task<Void> task) {
+//                if (task.isSuccessful()){
+//                    Toast.makeText(ProgressActivity.this, "Values added", Toast.LENGTH_SHORT).show();
+//                }
+//
+//            }
+//        });
+
     }
     public void increaseInteger(View view) {
         minteger = minteger + 1;
@@ -74,7 +116,7 @@ public class ProgressActivity extends AppCompatActivity {
         display(minteger);
     }
 
-    private void display(int number) {
+    public void display(int number) {
         TextView displayInteger = (TextView) findViewById(
                 R.id.integer_number);
         displayInteger.setText("" + number);
@@ -89,7 +131,7 @@ public class ProgressActivity extends AppCompatActivity {
         display1(minteger1);
     }
 
-    private void display1(int number1) {
+    public void display1(int number1) {
         TextView displayInteger1 = (TextView) findViewById(
                 R.id.integer_number1);
         displayInteger1.setText("" + number1);
@@ -104,7 +146,7 @@ public class ProgressActivity extends AppCompatActivity {
         display2(minteger2);
     }
 
-    private void display2(int number2) {
+    public void display2(int number2) {
         TextView displayInteger2 = (TextView) findViewById(
                 R.id.integer_number2);
         displayInteger2.setText("" + number2);
@@ -119,7 +161,7 @@ public class ProgressActivity extends AppCompatActivity {
         display3(minteger3);
     }
 
-    private void display3(int number3) {
+    public void display3(int number3) {
         TextView displayInteger3 = (TextView) findViewById(
                 R.id.integer_number3);
         displayInteger3.setText("" + number3);
@@ -134,7 +176,7 @@ public class ProgressActivity extends AppCompatActivity {
         display4(minteger4);
     }
 
-    private void display4(int number4) {
+    public void display4(int number4) {
         TextView displayInteger4 = (TextView) findViewById(
                 R.id.integer_number4);
         displayInteger4.setText("" + number4);
@@ -160,8 +202,38 @@ public class ProgressActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public boolean onNavigationItemSelected(@NonNull @org.jetbrains.annotations.NotNull MenuItem item) {
-        return true;
+    public void saveProgress(View view) {
+
+
+        int total = minteger + minteger1 + minteger2 + minteger3 + minteger4 + minteger5;
+        String stringtotal = String.valueOf(total);
+
+        FirebaseAuth auth;
+
+        auth = FirebaseAuth.getInstance();
+
+        FirebaseFirestore fstore = FirebaseFirestore.getInstance();
+        String userID;
+
+        userID = auth.getCurrentUser().getUid();
+        DocumentReference documentReference = fstore.collection("users").document(userID);
+        documentReference.update("completedExerciseDates", FieldValue.arrayUnion(java.util.Calendar.getInstance().getTime()))
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Log.d(TAG, "onSuccess: saved progress date " + userID);
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NotNull Exception e) {
+                Log.d(TAG, "did not save progress date: " + e.toString());
+            }
+        });
+
+
+
+
+
     }
 
 
