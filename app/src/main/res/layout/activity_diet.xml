@@ -131,23 +131,15 @@
             android:layout_marginTop="12dp"
             android:text="Sleep is essential in recovery. In order to heal, patients must be getting the recommended 9 hours of sleep a day."
             android:textColor="#100F0F" />
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintHorizontal_bias="0.497"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_nav"
-            app:itemIconTint="@drawable/selector"
-            app:itemTextColor="@drawable/selector"/>
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:onClick="sendBack"
+            android:text="Back" />
 
-        <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
     </LinearLayout>
 </ScrollView>

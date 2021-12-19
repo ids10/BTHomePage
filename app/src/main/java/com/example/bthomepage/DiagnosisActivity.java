@@ -39,8 +39,8 @@ public class DiagnosisActivity extends AppCompatActivity implements BottomNaviga
                         startActivity(intent2);
                         break;
 
-                    case R.id.lifestyleActivity:
-                        Intent intent3 = new Intent(DiagnosisActivity.this, DietActivity.class);
+                    case R.id.homeActivity:
+                        Intent intent3 = new Intent(DiagnosisActivity.this, HomePage.class);
                         startActivity(intent3);
                         break;
 

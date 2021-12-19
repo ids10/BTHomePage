@@ -48,8 +48,8 @@ public class SettingsActivity extends AppCompatActivity implements BottomNavigat
                         startActivity(intent2);
                         break;
 
-                    case R.id.lifestyleActivity:
-                        Intent intent3 = new Intent(SettingsActivity.this, DietActivity.class);
+                    case R.id.homeActivity:
+                        Intent intent3 = new Intent(SettingsActivity.this, HomePage.class);
                         startActivity(intent3);
                         break;
 
@@ -78,6 +78,12 @@ public class SettingsActivity extends AppCompatActivity implements BottomNavigat
 
 
     }
+    public void sendMessageLifestyle (View view){
+        startActivity(new Intent(SettingsActivity.this, DietActivity.class));
+
+
+    }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {

@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/homeActivity"
+        android:title="Home"
+        android:icon="@drawable/ic_launcher_home"/>
+
+    <item
         android:id="@+id/diagnosisActivity"
         android:title="Diagnosis"
         android:icon="@drawable/ic_launcher_diagnosis"
@@ -13,10 +18,7 @@
 <!--        android:enabled="true"-->
 <!--        android:visible="true"-->
 
-    <item
-        android:id="@+id/lifestyleActivity"
-        android:title="Lifestyle"
-        android:icon="@drawable/ic_launcher_person"/>
+
     <item
         android:id="@+id/progressActivity"
         android:title="Progress"

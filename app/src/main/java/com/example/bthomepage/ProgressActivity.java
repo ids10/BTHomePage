@@ -67,8 +67,8 @@ public class ProgressActivity extends AppCompatActivity implements BottomNavigat
                         startActivity(intent2);
                         break;
 
-                    case R.id.lifestyleActivity:
-                        Intent intent3 = new Intent(ProgressActivity.this, DietActivity.class);
+                    case R.id.homeActivity:
+                        Intent intent3 = new Intent(ProgressActivity.this, HomePage.class);
                         startActivity(intent3);
                         break;
 

@@ -38,8 +38,8 @@ public class LungsActivity extends AppCompatActivity implements BottomNavigation
                         startActivity(intent2);
                         break;
 
-                    case R.id.lifestyleActivity:
-                        Intent intent3 = new Intent(LungsActivity.this, DietActivity.class);
+                    case R.id.homeActivity:
+                        Intent intent3 = new Intent(LungsActivity.this, HomePage.class);
                         startActivity(intent3);
                         break;
 
