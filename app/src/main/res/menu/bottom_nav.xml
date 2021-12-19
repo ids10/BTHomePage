@@ -3,28 +3,27 @@
 
     <item
         android:id="@+id/diagnosisActivity"
-        android:enabled="true"
         android:title="Diagnosis"
-        android:icon="@drawable/diagnosislogo"/>
+        android:icon="@drawable/ic_launcher_diagnosis"
+        />
     <item
         android:id="@+id/exerciseActivity"
-        android:enabled="true"
         android:title="Exercises"
-        android:icon="@drawable/lungs"/>
+        android:icon="@drawable/ic_launcher_breathe"/>
+<!--        android:enabled="true"-->
+<!--        android:visible="true"-->
+
     <item
         android:id="@+id/lifestyleActivity"
-        android:enabled="true"
         android:title="Lifestyle"
-        android:icon="@drawable/dietexercise"/>
+        android:icon="@drawable/ic_launcher_person"/>
     <item
         android:id="@+id/progressActivity"
-        android:enabled="true"
         android:title="Progress"
-        android:icon="@drawable/progress"/>
+        android:icon="@drawable/ic_launcher_graph"/>
     <item
         android:id="@+id/settingsActivity"
-        android:enabled="true"
         android:title="Settings"
-        android:icon="@drawable/settings"/>
+        android:icon="@drawable/ic_launcher_foreground"/>
 
 </menu>

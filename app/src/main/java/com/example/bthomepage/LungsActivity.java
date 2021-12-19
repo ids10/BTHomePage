@@ -10,6 +10,8 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import org.jetbrains.annotations.NotNull;
+
 public class LungsActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
     BottomNavigationView bottomNavigationView;
@@ -87,7 +89,8 @@ public class LungsActivity extends AppCompatActivity implements BottomNavigation
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull @org.jetbrains.annotations.NotNull MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
         return false;
     }
+
 }

@@ -35,7 +35,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import static android.content.ContentValues.TAG;
 
 
-public class ProgressActivity extends AppCompatActivity {
+public class ProgressActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
     int minteger = 0;
     int minteger1 = 0;
     int minteger2 = 0;
@@ -198,7 +198,7 @@ public class ProgressActivity extends AppCompatActivity {
     }
 
     public void sendMessageCalendar(View view) {
-        Intent intent = new Intent(this, Calendar.class);
+        Intent intent = new Intent(this, MatCal.class);
         startActivity(intent);
     }
 
@@ -235,6 +235,13 @@ public class ProgressActivity extends AppCompatActivity {
 
 
     }
+
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+        return false;
+    }
+
 
 
 

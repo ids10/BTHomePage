@@ -15,7 +15,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class SettingsActivity extends AppCompatActivity {
+import org.jetbrains.annotations.NotNull;
+
+public class SettingsActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
     private Button logout;
 
     BottomNavigationView bottomNavigationView;
@@ -77,9 +79,11 @@ public class SettingsActivity extends AppCompatActivity {
 
     }
 
-    public boolean onNavigationItemSelected(@NonNull @org.jetbrains.annotations.NotNull MenuItem item) {
-        return true;
+    @Override
+    public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+        return false;
     }
+
 
 
 }

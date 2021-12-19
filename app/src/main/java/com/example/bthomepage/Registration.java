@@ -57,7 +57,6 @@ public class Registration extends AppCompatActivity {
         userEmail = (EditText)findViewById(R.id.etUserEmail);
         regButton = (Button)findViewById(R.id.btnRegister);
 
-        String userID;
         String userPasswordString = userPassword.getText().toString();
         String userEmailString = userEmail.getText().toString();
 
@@ -68,50 +67,40 @@ public class Registration extends AppCompatActivity {
 
         }
         else {
+
             auth = FirebaseAuth.getInstance();
             registerUser(userEmailString, userPasswordString);
-            Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
-
-            userID = auth.getCurrentUser().getUid();
-            FirebaseFirestore fstore = FirebaseFirestore.getInstance();
-            DocumentReference documentReference = fstore.collection("users").document(userID);
-            Map<String, Object> user = new HashMap<>();
-            user.put("email", userEmailString);
-            user.put("name", userEmailString);
-            user.put("uid", userID);
-            Log.d(TAG, "userid = " + userID);
-//          user.put("completedExerciseDates", Calendar.getInstance().getTime());
-
-            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                @Override
-                public void onSuccess(Void unused) {
-                    Log.d(TAG, "onSuccess: user Profile is created for " + userID);
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NotNull Exception e) {
-                    Log.d(TAG, "onFailure: " + e.toString());
-                }
-            });
-
-            Log.d(TAG, "onSuccess: user Profile is created for " + userID);
-
-            Intent intent = new Intent(Registration.this, HomePage.class);
-            startActivity(intent);
-            finish();
         }
     }
 
     private void registerUser(String userEmail, String userPassword) {
 
-
-
-
         auth.createUserWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(Registration.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(Registration.this, "Registration successful!", Toast.LENGTH_SHORT).show();
+                    String userID = auth.getCurrentUser().getUid();
+                    FirebaseFirestore fstore = FirebaseFirestore.getInstance();
+                    DocumentReference documentReference = fstore.collection("users").document(userID);
+                    Map<String, Object> user = new HashMap<>();
+                    user.put("email", userEmail);
+                    user.put("name", userEmail);
+                    user.put("uid", userID);
+                    documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(Registration.this, "Registration successful!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(Registration.this, HomePage.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull @NotNull Exception e) {
+                            Toast.makeText(Registration.this, "Unable to save your registration information", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
                 }
                 else{
                     Toast.makeText(Registration.this, "Please enter all details", Toast.LENGTH_SHORT).show();
@@ -125,23 +114,5 @@ public class Registration extends AppCompatActivity {
         userLogin = (TextView)findViewById(R.id.tvUserLogin);
         startActivity(intent);
 
-
     }
-
-//    private Boolean validate(){
-//        Boolean result = false;
-//
-//        String name = userName.getText().toString();
-//        String password = userPassword.getText().toString();
-//        String email = userEmail.getText().toString();
-//
-//        if(name.isEmpty() || password.isEmpty() || email.isEmpty()){
-//            Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT).show();
-//        }
-//        else{
-//            result = true;
-//        }
-//
-//        return result;
-//    }
 }

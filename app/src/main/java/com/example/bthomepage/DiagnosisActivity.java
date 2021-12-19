@@ -10,11 +10,11 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class DiagnosisActivity extends AppCompatActivity {
+import org.jetbrains.annotations.NotNull;
+
+public class DiagnosisActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     BottomNavigationView bottomNavigationView;
-
-
 
 
     @Override
@@ -24,9 +24,9 @@ public class DiagnosisActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item){
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.diagnosisActivity:
                         Intent intent1 = new Intent(DiagnosisActivity.this, DiagnosisActivity.class);
@@ -55,18 +55,17 @@ public class DiagnosisActivity extends AppCompatActivity {
                         break;
 
 
-
                 }
                 return false;
             }
         });
-//        bottomNavigationView.setSelectedItemId(R.id.person);
-
-
-
-
-
     }
+    @Override
+    public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+        return false;
+    }
+
+
     public void sendMessageCOPD(View view) {
         Intent intent = new Intent(this, COPDDescript.class);
         startActivity(intent);
@@ -76,14 +75,18 @@ public class DiagnosisActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CFDescript.class);
         startActivity(intent);
     }
+
     public void sendMessageCB(View view) {
         Intent intent = new Intent(this, CBDescript.class);
         startActivity(intent);
     }
+
     public void sendMessageAsthma(View view) {
         Intent intent = new Intent(this, AsthmaDescript.class);
         startActivity(intent);
     }
+
+}
 
 
 
@@ -112,9 +115,6 @@ public class DiagnosisActivity extends AppCompatActivity {
 //        return false;
 //    }
 
-    public boolean onNavigationItemSelected(@NonNull @org.jetbrains.annotations.NotNull MenuItem item) {
-        return true;
-    }
 
 
-    }
+
