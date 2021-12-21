@@ -10,7 +10,7 @@ The primary form of navigation is through the bottom navigation bar. Users will 
 
 ## App challenges and future implementations
 This app allowed me to learn Android Studio and Firebase, as it was my first time developing an application.
-The primary challenge in when developing this application was regiserting the user profile information in Cloud Firestore. The user was able to be authenticated, however, their information and specific attributes would not be stored in the Cloud Firestore. As a result, I was able to add their information would be added once they saved their progress, if it had not been done already in registration.
+The primary challenge in when developing this application was registering the user profile information in Cloud Firestore. The user was able to be authenticated, however, their information and specific attributes would not be stored in the Cloud Firestore. As a result, I was able to add their information would be added once they saved their progress, if it had not been done already in registration.
 Additioanlly, it was challenging to have the saved user progress display on the calendar. I was able to use Material Calendar View and implement com.prolificinteractive.materialcalendarview.MaterialCalendarView to do so.
 The app is fully functional, however, there are improvements being made to its interface and capabilities, such as the enhancing the progress tracker and adding more functionality to the settings page.
 
