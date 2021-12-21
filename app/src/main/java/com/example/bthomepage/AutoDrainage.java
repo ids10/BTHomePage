@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class AutoDrainage extends AppCompatActivity {
-
+//autogenic drainage exerise page is displayed
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -21,6 +21,7 @@ public class AutoDrainage extends AppCompatActivity {
         textView = findViewById(R.id.textViewLinkAutogenic);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
+    //button click leads to step 1
     public void sendMessageAutoSteps(View view) {
         Intent intent = new Intent(this, AutoDrainageStepOne.class);
         startActivity(intent);

@@ -124,9 +124,10 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav"
-        app:itemIconTint="@drawable/selector"
-        app:itemTextColor="@drawable/selector"/>
+        app:itemIconTint="@drawable/nav_view_colored"
+        app:itemTextColor="@drawable/nav_view_colored"/>
 
 
+<!--    android:state_checked="true"-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

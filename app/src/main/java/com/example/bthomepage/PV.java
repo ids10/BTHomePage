@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class PV extends AppCompatActivity {
-
+//percussion and vibrations info is displayed
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +19,7 @@ public class PV extends AppCompatActivity {
         textView = findViewById(R.id.textViewLinkAutogenic);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
+    //button click leads to percussions and viibrations options
     public void sendMessagesOptionsPV(View view) {
         Intent intent = new Intent(this, OptionsPV.class);
         startActivity(intent);

@@ -28,13 +28,16 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.homeActivity);
 
+//bottom navigation view implemented
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
 
             @Override
             public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.diagnosisActivity:
+//                        item.setIcon(R.drawable.ic_launcher_diagnosis);
                         Intent intent1 = new Intent(HomePage.this, DiagnosisActivity.class);
                         startActivity(intent1);
                         break;
@@ -46,8 +49,6 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
                         break;
 
                     case R.id.homeActivity:
-                        Intent intent3 = new Intent(HomePage.this, HomePage.class);
-                        startActivity(intent3);
                         break;
 
                     case R.id.progressActivity:
@@ -65,10 +66,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
                 return false;
             }
         });
-
-        Toast.makeText(HomePage.this, "Login successful!", Toast.LENGTH_SHORT).show();
-
-
+//click on image leads to diagnosis options
         ImageView imgClickDiagnosis;
         imgClickDiagnosis = (ImageView)findViewById(R.id.imgDiagnosis);
         Intent intentdiagnosis = new Intent(this, DiagnosisActivity.class);
@@ -78,7 +76,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
 //                Toast.makeText(HomePage.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
                 startActivity(intentdiagnosis);
             } });
-
+//click on image leads to exercise options
         ImageView imgClickLungs;
         imgClickLungs = (ImageView)findViewById(R.id.imgLungs);
         Intent intentlungs = new Intent(this, LungsActivity.class);
@@ -88,7 +86,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
 //                Toast.makeText(HomePage.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
                 startActivity(intentlungs);
             } });
-
+//click on image leads to information on diet and lifestyle
         ImageView imgClickDiet;
         imgClickDiet = (ImageView)findViewById(R.id.imgDiet);
         Intent intentdiet = new Intent(this, DietActivity.class);
@@ -98,6 +96,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
 //                Toast.makeText(HomePage.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
                 startActivity(intentdiet);
             } });
+//click on image leads to progress page
         ImageView imgClickProgress;
         imgClickProgress = (ImageView)findViewById(R.id.imgProgress);
         Intent intentprogress = new Intent(this, ProgressActivity.class);
@@ -107,7 +106,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
 //                Toast.makeText(HomePage.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
                 startActivity(intentprogress);
             } });
-
+//click on image leads to settings page
         ImageView imgClickSettings;
         imgClickSettings = (ImageView)findViewById(R.id.imgSettings);
         Intent intentsettings = new Intent(this, SettingsActivity.class);
@@ -117,7 +116,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
 //                Toast.makeText(HomePage.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
                 startActivity(intentsettings);
             } });
-
+//click on image leads to faq page
         ImageView imgClickFaq;
         imgClickFaq = (ImageView)findViewById(R.id.imgFaq);
         Intent intentfaq = new Intent(this, FaqActivity.class);

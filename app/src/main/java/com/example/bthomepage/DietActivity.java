@@ -14,8 +14,7 @@ import com.google.android.material.navigation.NavigationBarView;
 import org.jetbrains.annotations.NotNull;
 
 public class DietActivity extends AppCompatActivity {
-    BottomNavigationView bottomNavigationView;
-
+//lifestyle information page is displayed
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +22,8 @@ public class DietActivity extends AppCompatActivity {
         setContentView(R.layout.activity_diet);
 
     }
+    //button click leads to settings page
+
     public void sendBack(View view) {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);

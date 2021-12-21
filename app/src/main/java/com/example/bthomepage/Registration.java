@@ -44,7 +44,7 @@ public class Registration extends AppCompatActivity {
     private FirebaseAuth auth;
 
 
-
+//registration page is displayed
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +59,7 @@ public class Registration extends AppCompatActivity {
 
         String userPasswordString = userPassword.getText().toString();
         String userEmailString = userEmail.getText().toString();
-
+//password requirements for user to register
         if (userPasswordString.isEmpty() || userEmailString.isEmpty()){
             Toast.makeText(this, "Please enter all details", Toast.LENGTH_SHORT).show();
         }else if (userPasswordString.length() < 6){
@@ -67,6 +67,7 @@ public class Registration extends AppCompatActivity {
 
         }
         else {
+            //if requirements are met then user is registered
 
             auth = FirebaseAuth.getInstance();
             registerUser(userEmailString, userPasswordString);
@@ -74,7 +75,7 @@ public class Registration extends AppCompatActivity {
     }
 
     private void registerUser(String userEmail, String userPassword) {
-
+//user is registered on firestore
         auth.createUserWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(Registration.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -108,7 +109,7 @@ public class Registration extends AppCompatActivity {
             }
         });
     }
-
+//ability for user to navigate to login page
     public void sendMessageOldLogin(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         userLogin = (TextView)findViewById(R.id.tvUserLogin);

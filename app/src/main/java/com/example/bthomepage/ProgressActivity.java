@@ -51,6 +51,9 @@ public class ProgressActivity extends AppCompatActivity implements BottomNavigat
         setContentView(R.layout.activity_progress);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.progressActivity);
+
+//bottom navigation view implemented
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
             @Override
@@ -73,8 +76,6 @@ public class ProgressActivity extends AppCompatActivity implements BottomNavigat
                         break;
 
                     case R.id.progressActivity:
-                        Intent intent4 = new Intent(ProgressActivity.this, ProgressActivity.class);
-                        startActivity(intent4);
                         break;
 
                     case R.id.settingsActivity:
@@ -88,25 +89,8 @@ public class ProgressActivity extends AppCompatActivity implements BottomNavigat
                 return false;
             }
         });
-
-//        FirebaseFirestore db = FirebaseFirestore.getInstance();
-//
-//        Map<String, Object> city = new HashMap<>();
-//        city.put("name", "nyc");
-//        city.put("state", "ny");
-//        city.put("country", "usa");
-//
-//        db.collection("users").document("JSR").set(city).addOnCompleteListener(new OnCompleteListener<Void>() {
-//            @Override
-//            public void onComplete(@NonNull @NotNull Task<Void> task) {
-//                if (task.isSuccessful()){
-//                    Toast.makeText(ProgressActivity.this, "Values added", Toast.LENGTH_SHORT).show();
-//                }
-//
-//            }
-//        });
-
     }
+    //ability for user to increase and decrese number of exercises completed
     public void increaseInteger(View view) {
         minteger = minteger + 1;
         display(minteger);
@@ -201,6 +185,8 @@ public class ProgressActivity extends AppCompatActivity implements BottomNavigat
         Intent intent = new Intent(this, MatCal.class);
         startActivity(intent);
     }
+
+    //save progress button adds timestamp value to completedExerciseDates
 
     public void saveProgress(View view) {
 

@@ -4,6 +4,7 @@ import com.google.firebase.Timestamp;
 
 import java.util.List;
 
+//class referenced when pulling user data
 public class MyUser {
         private String name;
         private String email;

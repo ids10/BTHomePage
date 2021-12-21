@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class SideLungs extends AppCompatActivity {
-
+//side lungs exercise page displayed
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,10 +20,14 @@ public class SideLungs extends AppCompatActivity {
         textView = findViewById(R.id.textViewLinkAutogenic);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
+    //button leads to progress page
+
     public void sendMessagesProgress(View view) {
         Intent intent = new Intent(this, ProgressActivity.class);
         startActivity(intent);
     }
+    //button leads to exercise page
+
     public void sendMessagesExercises(View view) {
         Intent intent = new Intent(this, LungsActivity.class);
         startActivity(intent);

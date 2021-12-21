@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.bthomepage.MESSAGE";
     private FirebaseAuth auth;
     private TextView userReg;
-
+//user login page is created
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /** Called when the user taps the Send button */
+    /** Called when the user taps the login button */
     public void sendMessage(View view) {
         Intent intent = new Intent(this, HomePage.class);
         EditText editTextUser = (EditText) findViewById(R.id.etUsername);
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         String password = editTextPassword.getText().toString();
 
 
-
+//checks if all fields are complete to proceed
         if (username.isEmpty() || password.isEmpty()){
             Toast.makeText(MainActivity.this, "Please enter all details correctly", Toast.LENGTH_SHORT).show();
         }
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loginUser(String username, String password) {
-
+//user is logged in through firebase verification
         auth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     //Login successful
                     String userID;
 
-
+//unique user id is called and path is referenced in firestore
                     userID = auth.getCurrentUser().getUid();
                     FirebaseFirestore fstore = FirebaseFirestore.getInstance();
                     DocumentReference documentReference = fstore.collection("users").document(userID);
@@ -84,7 +84,9 @@ public class MainActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 DocumentSnapshot document = task.getResult();
                                 MyUser myuser = document.toObject(MyUser.class);
+                                //if user has not been initiated in firestore, object is created with credentials stored
                                 if (myuser == null) {
+                                    //created since sometimes user isn't registered with firestore even if authenticated, therefore created object
                                     Map<String, Object> user = new HashMap<>();
                                     user.put("email", username);
                                     user.put("name", username);
@@ -117,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    //button click leads to registration page
 
     public void sendMessagenewReg(View view) {
         Intent intent = new Intent(this, Registration.class);

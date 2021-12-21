@@ -22,8 +22,9 @@ public class SettingsActivity extends AppCompatActivity implements BottomNavigat
 
     BottomNavigationView bottomNavigationView;
 
+//settings page is displayed
 
-
+//bottom navigation view is implemented
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +33,8 @@ public class SettingsActivity extends AppCompatActivity implements BottomNavigat
         logout = findViewById(R.id.logout);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.settingsActivity);
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
             @Override
@@ -59,8 +62,6 @@ public class SettingsActivity extends AppCompatActivity implements BottomNavigat
                         break;
 
                     case R.id.settingsActivity:
-                        Intent intent5 = new Intent(SettingsActivity.this, SettingsActivity.class);
-                        startActivity(intent5);
                         break;
 
 
@@ -71,6 +72,7 @@ public class SettingsActivity extends AppCompatActivity implements BottomNavigat
         });
 
     }
+    //ability for user to log out
     public void sendMessageLogOut (View view){
         FirebaseAuth.getInstance().signOut();
         Toast.makeText(SettingsActivity.this, "Logged Out", Toast.LENGTH_SHORT).show();
@@ -78,10 +80,15 @@ public class SettingsActivity extends AppCompatActivity implements BottomNavigat
 
 
     }
+    //ability for user to navigate to lifestyle page
     public void sendMessageLifestyle (View view){
         startActivity(new Intent(SettingsActivity.this, DietActivity.class));
 
 
+    }
+    //ability for user to navigate to faq page
+    public void sendMessageFAQ (View view){
+        startActivity(new Intent(SettingsActivity.this, FaqActivity.class));
     }
 
 

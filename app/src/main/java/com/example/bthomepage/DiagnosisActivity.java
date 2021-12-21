@@ -23,14 +23,14 @@ public class DiagnosisActivity extends AppCompatActivity implements BottomNaviga
         setContentView(R.layout.activity_diagnosis);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.diagnosisActivity);
+        //bottom navigation is implemented and new activity starts depending on icon selected
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.diagnosisActivity:
-                        Intent intent1 = new Intent(DiagnosisActivity.this, DiagnosisActivity.class);
-                        startActivity(intent1);
                         break;
 
 
@@ -65,7 +65,7 @@ public class DiagnosisActivity extends AppCompatActivity implements BottomNaviga
         return false;
     }
 
-
+//different diagnosis options and user selects icon to navigate there
     public void sendMessageCOPD(View view) {
         Intent intent = new Intent(this, COPDDescript.class);
         startActivity(intent);

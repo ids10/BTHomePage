@@ -22,6 +22,9 @@ public class LungsActivity extends AppCompatActivity implements BottomNavigation
         setContentView(R.layout.activity_lungs);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.exerciseActivity);
+
+//bottom navigation implemented
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
             @Override
@@ -34,8 +37,6 @@ public class LungsActivity extends AppCompatActivity implements BottomNavigation
 
 
                     case R.id.exerciseActivity:
-                        Intent intent2 = new Intent(LungsActivity.this, LungsActivity.class);
-                        startActivity(intent2);
                         break;
 
                     case R.id.homeActivity:
@@ -63,6 +64,7 @@ public class LungsActivity extends AppCompatActivity implements BottomNavigation
         
 
     }
+    //buttons lead to specific breathing exercises
     public void sendMessagePLBreathing(View view) {
         Intent intent = new Intent(this, PLBreathing.class);
         startActivity(intent);

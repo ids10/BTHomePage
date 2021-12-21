@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class OptionsPV extends AppCompatActivity {
-
+//percussiona and vibrations exercise options displayed and ability to navigate there
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

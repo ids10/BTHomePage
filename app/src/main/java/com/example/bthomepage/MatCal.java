@@ -49,14 +49,16 @@ public class MatCal extends AppCompatActivity {
 
 
         MaterialCalendarView materialCalendarView = (MaterialCalendarView) findViewById(R.id.calendarView2);
+//calendar created referencing com.prolificinteractive.materialcalendarview.MaterialCalendarView
 
+        //minimum and maximum calendar dates set
         materialCalendarView.state().edit()
                 .setMinimumDate(CalendarDay.from(2019, 12, 31))
                 .setMaximumDate(CalendarDay.from(2100, 12, 31))
                 .setCalendarDisplayMode(CalendarMode.MONTHS)
                 .commit();
 
-
+//user cannot manually select date on calendar
         materialCalendarView.setSelectionMode(MaterialCalendarView.SELECTION_MODE_NONE);
 
 
@@ -65,18 +67,19 @@ public class MatCal extends AppCompatActivity {
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference documentReference = db.collection("users").document(userID);
-
+//specific user is referenced trhoguh unique id and if task is successful
         documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
+                    //MyUser class is referenced is to retrieve user data
                     DocumentSnapshot document = task.getResult();
                     MyUser user = document.toObject(MyUser.class);
                     String strdata = user.getName();
                     List<Timestamp> timestamps = user.getCompletedExerciseDates();
                     Timestamp myTime;
                     Date date;
-
+//completed exercise dates are looped through and date is highlighted on calendar
                     for (int i = 0; i < timestamps.size(); i++) {
                         myTime = timestamps.get(i);
                         date = myTime.toDate();
@@ -92,6 +95,7 @@ public class MatCal extends AppCompatActivity {
 
 
     }
+    //button click leads to progress page
 
     public void sendBack(View view) {
         Intent intent = new Intent(this, ProgressActivity.class);

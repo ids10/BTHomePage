@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class OptionsDrainPos extends AppCompatActivity {
-
+//different drain position options displayed and ability to navigate to specific exercises
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
