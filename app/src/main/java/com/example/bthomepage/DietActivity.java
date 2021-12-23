@@ -25,7 +25,7 @@ public class DietActivity extends AppCompatActivity {
     //button click leads to settings page
 
     public void sendBack(View view) {
-        Intent intent = new Intent(this, SettingsActivity.class);
+        Intent intent = new Intent(this, HomePage.class);
         startActivity(intent);
     }
 
