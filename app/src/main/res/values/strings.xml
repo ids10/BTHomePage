@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BTHomePage</string>
+    <string name="app_name">BreatheEasy</string>
     <string name="edit_username">Enter Username</string>
     <string name="edit_password">Enter Password</string>
     <string name="button_login">Login</string>
